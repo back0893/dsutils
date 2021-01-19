@@ -16,7 +16,7 @@ import (
 )
 
 var (
-	log = logger.Logger("dsutils")
+	log = logger.Logger("dsutils-clone")
 )
 
 func CloneFromRemoteToLocal(
