@@ -10,7 +10,7 @@ import (
 
 	ds "github.com/ipfs/go-datastore"
 	"github.com/ipfs/go-datastore/query"
-	badger "github.com/ipfs/go-ds-badger"
+	badger "github.com/ipfs/go-ds-badger2"
 	logger "github.com/ipfs/go-log/v2"
 	mongods "github.com/textileio/go-ds-mongo"
 )
