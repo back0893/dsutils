@@ -43,6 +43,26 @@ func CloneFromRemoteToRemote(
 	return clone("", fromMongoUri, fromMongoDatabase, fromMongoCollection, "", toMongoUri, toMongoDatabase, toMongoCollection, parallel, verbose)
 }
 
+func CloneFromLocalToLocal(
+	fromBadgerRepo string,
+	toBadgerRepo string,
+	parallel int,
+	verbose bool,
+) (ds.TxnDatastore, error) {
+	return clone(fromBadgerRepo, "", "", "", toBadgerRepo, "", "", "", parallel, verbose)
+}
+
+func CloneFromLocalToRemote(
+	fromBadgerRepo string,
+	toMongoUri string,
+	toMongoDatabase string,
+	toMongoCollection string,
+	parallel int,
+	verbose bool,
+) (ds.TxnDatastore, error) {
+	return clone(fromBadgerRepo, "", "", "", "", toMongoUri, toMongoDatabase, toMongoCollection, parallel, verbose)
+}
+
 func clone(
 	fromBadgerRepo string,
 	fromMongoUri string,
